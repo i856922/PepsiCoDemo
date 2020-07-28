@@ -1,0 +1,37 @@
+ID: PepsicoDemoK
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: PepsicoDBK
+   type: hdb
+   path: PepsicoDBK
+   requires:
+    - name: hdi_PepsicoDBK
+
+
+ 
+
+
+ 
+
+resources:
+ - name: hdi_PepsicoDBK
+   parameters:
+      config:
+         schema: PEPSICOK
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: hdi_aeb
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
+
+ - name: hdi_test22
+   properties:
+      hdi-container-name_3: ${service-name}
+   type: com.sap.xs.hdi-container
+
